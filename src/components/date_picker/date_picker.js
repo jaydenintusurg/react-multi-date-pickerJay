@@ -269,25 +269,28 @@ function DatePicker(
   if (multiple || isArray(date) || !editable) inputMode = "none";
 
   return (
-    <ElementPopper
-      ref={setRef}
-      element={renderInput()}
-      popper={isVisible && renderCalendar()}
-      active={!isMobileMode && isCalendarReady}
-      position={calendarPosition}
-      arrow={!isMobileMode && arrow}
-      fixMainPosition={!scrollSensitive || fixMainPosition}
-      zIndex={zIndex}
-      onChange={!isMobileMode && onPositionChange}
-      containerClassName={`rmdp-container ${containerClassName}`}
-      arrowClassName={[
-        "rmdp-ep-arrow",
-        `rmdp-ep-${shadow ? "shadow" : "border"}`,
-        className,
-        arrowClassName,
-      ].join(" ")}
-      {...otherProps}
-    />
+    <>
+      <h1>Hello world</h1>
+      <ElementPopper
+        ref={setRef}
+        element={renderInput()}
+        popper={isVisible && renderCalendar()}
+        active={!isMobileMode && isCalendarReady}
+        position={calendarPosition}
+        arrow={!isMobileMode && arrow}
+        fixMainPosition={!scrollSensitive || fixMainPosition}
+        zIndex={zIndex}
+        onChange={!isMobileMode && onPositionChange}
+        containerClassName={`rmdp-container ${containerClassName}`}
+        arrowClassName={[
+          "rmdp-ep-arrow",
+          `rmdp-ep-${shadow ? "shadow" : "border"}`,
+          className,
+          arrowClassName,
+        ].join(" ")}
+        {...otherProps}
+      />
+    </>
   );
 
   function setRef(element) {
